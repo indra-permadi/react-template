@@ -1,271 +1,89 @@
-import React from "react";
-import NavbarMain from "../Component/Navbar/NavbarMain";
+import React, { useState } from "react";
+import dataGallery from "../assets/dataGallery.json";
+import FeatherIcon from "feather-icons-react";
 
 const Gallery = () => {
+  console.log(dataGallery);
   return (
     <>
-      <div className="container relative">
-        <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
-          <div className="md:col-span-6">
-            <div className="grid grid-cols-12 gap-4 items-center">
-              <div className="col-span-7">
-                <div className="grid grid-cols-1 gap-4">
-                  <img
-                    src="assets/images/event/1.jpg"
-                    className="shadow rounded-lg"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div className="col-span-5">
-                <div className="grid grid-cols-1 gap-4">
-                  <img
-                    src="assets/images/event/2.jpg"
-                    className="shadow rounded-lg"
-                    alt=""
-                  />
-                  <div className="w-28 h-28 bg-indigo-600/10 rounded-lg" />
-                </div>
-              </div>
-            </div>
-          </div>
-          {/*end col*/}
-          <div className="md:col-span-6">
-            <div className="lg:ms-5">
-              <h6 className="text-indigo-600 text-sm font-bold uppercase mb-2">
-                Outpace Your Competition
-              </h6>
-              <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-                Get access to the full <br /> conference experience.
-              </h3>
-              <p className="text-slate-400 max-w-xl mb-6">
-                Get instant helpful resources about anything on the go, easily
-                implement secure money transfer solutions, boost your daily
-                efficiency, connect to other app users and create your own
-                Techwind network, and much more with just a few taps. commodo
-                consequat. Duis aute irure.
-              </p>
-              <div className="flex mt-6">
-                <i className="uil uil-map-marker text-indigo-600 text-4xl me-4 mt-2" />
-                <div className="">
-                  <h5 className="text-xl font-semibold mb-0">Location</h5>
-                  <p className="text-slate-400 mt-2">
-                    C/54 Northwest Freeway, <br /> Suite 558, Houston, <br />{" "}
-                    USA 485
-                  </p>
-                </div>
-              </div>
-              <div className="flex mt-6">
-                <i className="uil uil-clock text-indigo-600 text-4xl me-4 mt-2" />
-                <div className="">
-                  <h5 className="text-xl font-semibold mb-0">Time</h5>
-                  <p className="text-slate-400 mt-2">
-                    October 11, 2022 <br /> 9:00A.M. - 12:00P.M.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/*end container*/}
-      {/* Team */}
-      <div className="container relative md:mt-24 mt-16">
-        <div className="grid grid-cols-1 pb-8 text-center">
-          <h6 className="text-indigo-600 text-sm font-bold uppercase mb-2">
-            Event Speakers
-          </h6>
-          <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-            Meet Our Speakers
+      {/* Start Home */}
+      <section
+        className="relative md:py-56 py-44 bg-[url('../../assets/images/photography/photographer.jpg')] bg-cover jarallax"
+        data-jarallax=""
+        data-speed="0.5"
+        id="aboutme"
+      >
+        <div className="absolute inset-0 h-full w-full bg-gradient-to-t to-transparent via-white/80 dark:via-slate-900/80 from-white dark:from-slate-900" />
+        <div className="absolute text-center p-6 bottom-0 start-0 end-0">
+          <h3 className="md:text-3xl md:leading-normal text-2xl leading-normal font-bold">
+            Gallery
           </h3>
-          <p className="text-slate-400 max-w-xl mx-auto">
-            Start working with Tailwind CSS that can provide everything you need
-            to generate awareness, drive traffic, connect.
-          </p>
         </div>
-        {/*end grid*/}
-        <div className="grid md:grid-cols-12 grid-cols-1 mt-8 gap-[30px]">
-          <div className="lg:col-span-3 md:col-span-6">
-            <div className="group text-center">
-              <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                <img src="assets/images/client/04.jpg" className="" alt="" />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 duration-500" />
-                <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 duration-500">
-                  <li className="inline">
-                    <a
-                      href=""
-                      className="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-indigo-600 bg-indigo-600 hover:border-indigo-600 hover:bg-indigo-600 text-white"
-                    >
-                      <i data-feather="facebook" className="h-4 w-4" />
-                    </a>
+      </section>
+      {/*end section*/}
+      {/* End Home */}
+      {/* Start Section*/}
+      <section className="relative md:py-24 py-16">
+        <div className="container relative">
+          <div className="grid grid-cols-1 items-center gap-[30px]">
+            <div className="filters-group-wrap text-center">
+              <div className="filters-group">
+                <ul className="mb-0 list-none container-filter-border-bottom filter-options space-x-3">
+                  <li
+                    className="inline-block text-lg font-semibold mb-3 cursor-pointer relative border-b border-transparent text-slate-400 duration-500 active"
+                    data-group="all"
+                  >
+                    All
                   </li>
-                  <li className="inline">
-                    <a
-                      href=""
-                      className="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-indigo-600 bg-indigo-600 hover:border-indigo-600 hover:bg-indigo-600 text-white"
-                    >
-                      <i data-feather="instagram" className="h-4 w-4" />
-                    </a>
-                  </li>
-                  <li className="inline">
-                    <a
-                      href=""
-                      className="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-indigo-600 bg-indigo-600 hover:border-indigo-600 hover:bg-indigo-600 text-white"
-                    >
-                      <i data-feather="linkedin" className="h-4 w-4" />
-                    </a>
+                  <li
+                    className="inline-block text-lg font-semibold mb-3 cursor-pointer relative border-b border-transparent text-slate-400 duration-500"
+                    data-group="branding"
+                  >
+                    Branding
                   </li>
                 </ul>
-                {/*end icon*/}
-              </div>
-              <div className="content mt-3">
-                <a
-                  href=""
-                  className="text-lg font-semibold hover:text-indigo-600 duration-500"
-                >
-                  Jack John
-                </a>
-                <p className="text-slate-400">Speaker</p>
               </div>
             </div>
           </div>
-          <div className="lg:col-span-3 md:col-span-6">
-            <div className="group text-center">
-              <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                <img src="assets/images/client/05.jpg" className="" alt="" />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 duration-500" />
-                <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 duration-500">
-                  <li className="inline">
-                    <a
-                      href=""
-                      className="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-indigo-600 bg-indigo-600 hover:border-indigo-600 hover:bg-indigo-600 text-white"
-                    >
-                      <i data-feather="facebook" className="h-4 w-4" />
-                    </a>
-                  </li>
-                  <li className="inline">
-                    <a
-                      href=""
-                      className="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-indigo-600 bg-indigo-600 hover:border-indigo-600 hover:bg-indigo-600 text-white"
-                    >
-                      <i data-feather="instagram" className="h-4 w-4" />
-                    </a>
-                  </li>
-                  <li className="inline">
-                    <a
-                      href=""
-                      className="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-indigo-600 bg-indigo-600 hover:border-indigo-600 hover:bg-indigo-600 text-white"
-                    >
-                      <i data-feather="linkedin" className="h-4 w-4" />
-                    </a>
-                  </li>
-                </ul>
-                {/*end icon*/}
-              </div>
-              <div className="content mt-3">
-                <a
-                  href=""
-                  className="text-lg font-semibold hover:text-indigo-600 duration-500"
+          {/*grid*/}
+          <div id="grid" className="md:flex justify-center mx-auto mt-4">
+            {dataGallery.map((datas, index) => {
+              return (
+                <div
+                  className="lg:w-1/4 md:w-1/3 p-1 picture-item"
+                  data-groups='["branding"]'
                 >
-                  Krista John
-                </a>
-                <p className="text-slate-400">Speaker</p>
-              </div>
-            </div>
+                  <div className="group relative block overflow-hidden rounded-md duration-500">
+                    <img src={datas.imageUrl} className="" alt={datas.description} />
+                    <div className="absolute top-1/2 -translate-y-1/2 start-0 end-0 text-center opacity-0 group-hover:opacity-100 duration-500">
+                      <a
+                        href={datas.imageUrl} 
+                        className="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white lightbox"
+                      >
+                        <FeatherIcon icon="camera" />
+                        {/* <i className="uil uil-camera" /> */}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          <div className="lg:col-span-3 md:col-span-6">
-            <div className="group text-center">
-              <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                <img src="assets/images/client/06.jpg" className="" alt="" />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 duration-500" />
-                <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 duration-500">
-                  <li className="inline">
-                    <a
-                      href=""
-                      className="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-indigo-600 bg-indigo-600 hover:border-indigo-600 hover:bg-indigo-600 text-white"
-                    >
-                      <i data-feather="facebook" className="h-4 w-4" />
-                    </a>
-                  </li>
-                  <li className="inline">
-                    <a
-                      href=""
-                      className="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-indigo-600 bg-indigo-600 hover:border-indigo-600 hover:bg-indigo-600 text-white"
-                    >
-                      <i data-feather="instagram" className="h-4 w-4" />
-                    </a>
-                  </li>
-                  <li className="inline">
-                    <a
-                      href=""
-                      className="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-indigo-600 bg-indigo-600 hover:border-indigo-600 hover:bg-indigo-600 text-white"
-                    >
-                      <i data-feather="linkedin" className="h-4 w-4" />
-                    </a>
-                  </li>
-                </ul>
-                {/*end icon*/}
-              </div>
-              <div className="content mt-3">
-                <a
-                  href=""
-                  className="text-lg font-semibold hover:text-indigo-600 duration-500"
-                >
-                  Roger Jackson
-                </a>
-                <p className="text-slate-400">Speaker</p>
-              </div>
-            </div>
-          </div>
-          <div className="lg:col-span-3 md:col-span-6">
-            <div className="group text-center">
-              <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                <img src="assets/images/client/07.jpg" className="" alt="" />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 duration-500" />
-                <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 duration-500">
-                  <li className="inline">
-                    <a
-                      href=""
-                      className="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-indigo-600 bg-indigo-600 hover:border-indigo-600 hover:bg-indigo-600 text-white"
-                    >
-                      <i data-feather="facebook" className="h-4 w-4" />
-                    </a>
-                  </li>
-                  <li className="inline">
-                    <a
-                      href=""
-                      className="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-indigo-600 bg-indigo-600 hover:border-indigo-600 hover:bg-indigo-600 text-white"
-                    >
-                      <i data-feather="instagram" className="h-4 w-4" />
-                    </a>
-                  </li>
-                  <li className="inline">
-                    <a
-                      href=""
-                      className="h-8 w-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-indigo-600 bg-indigo-600 hover:border-indigo-600 hover:bg-indigo-600 text-white"
-                    >
-                      <i data-feather="linkedin" className="h-4 w-4" />
-                    </a>
-                  </li>
-                </ul>
-                {/*end icon*/}
-              </div>
-              <div className="content mt-3">
-                <a
-                  href=""
-                  className="text-lg font-semibold hover:text-indigo-600 duration-500"
-                >
-                  Johnny English
-                </a>
-                <p className="text-slate-400">Speaker</p>
-              </div>
+          {/*end grid*/}
+          <div className="grid grid-cols-1 mt-8">
+            <div className="text-center">
+              <a
+                href="photography-portfolio.html"
+                className="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-slate-400 dark:text-white/70 dark:hover:text-white hover:text-indigo-600 after:bg-indigo-600 dark:after:bg-white duration-500 ease-in-out"
+              >
+                See More <i className="uil uil-arrow-right" />
+              </a>
             </div>
           </div>
         </div>
-        {/*end grid*/}
-      </div>
-      {/*end container*/}
-      {/* team */}
+        {/*end container*/}
+      </section>
+      {/*end section*/}
     </>
   );
 };

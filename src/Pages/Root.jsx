@@ -2,6 +2,7 @@ import FeatherIcon from "feather-icons-react";
 import { useEffect, useState } from "react";
 import NavbarMain from "../Component/Navbar/NavbarMain";
 import { Outlet } from "react-router-dom";
+import FooterData from "../Component/Footer/Footer";
 
 function Root() {
   return (
@@ -11,6 +12,7 @@ function Root() {
         
         <Outlet />
       </section>
+      <FooterData/>
     </>
   );
 }

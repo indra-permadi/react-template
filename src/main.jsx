@@ -8,12 +8,17 @@ import Root from "./Pages/Root.jsx";
 import Gallery from "./Pages/Gallery.jsx";
 import Shows from "./Pages/Shows.jsx";
 import ContactUs from "./Pages/ContactUs.jsx";
+import Home from "./Pages/Home.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     children: [
+      {
+        index:true,
+        element: <Home />,
+      },
       {
         path: "gallery",
         element: <Gallery />,
