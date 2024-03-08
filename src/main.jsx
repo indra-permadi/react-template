@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./assets/scss/tailwind.scss";
-// import "../src/index.css";
+// import "./index.scss";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Root from "./Pages/Root.jsx";
 import Gallery from "./Pages/Gallery.jsx";

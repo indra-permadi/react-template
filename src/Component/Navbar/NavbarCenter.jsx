@@ -47,7 +47,7 @@ function NavbarCenter() {
       >
         <div className="container relative">
           {/* Logo container*/}
-          <a className="logo" href="index.html">
+          <a className="logo" href="#">
             <span className="inline-block dark:hidden">
               <img src={logoDark} className="l-dark" height={24} alt="" />
               <img src={logoLight} className="l-light" height={24} alt="" />
@@ -82,20 +82,20 @@ function NavbarCenter() {
                     <FeatherIcon icon="settings" className="h-4 w-4" />
                   </span>
                 </span>
-                <span className="login-btn-light">
+                {/* <span className="login-btn-light">
                   <span className="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 border hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700">
                     <FeatherIcon icon="settings" className="h-4 w-4" />
                   </span>
-                </span>
+                </span> */}
               </a>
             </li>
             <li className="inline ps-1 mb-0">
               <a href="https://1.envato.market/techwind" target="_blank">
-                <div className="login-btn-primary">
+                {/* <div className="login-btn-primary">
                   <span className="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full bg-indigo-600 hover:bg-indigo-700 border border-indigo-600 hover:border-indigo-700 text-white">
                     <FeatherIcon icon="shopping-cart" className="h-4 w-4" />
                   </span>
-                </div>
+                </div> */}
                 <div className="login-btn-light">
                   <span className="h-9 w-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 border hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700">
                     <FeatherIcon icon="shopping-cart" className="h-4 w-4" />
@@ -124,7 +124,7 @@ function NavbarCenter() {
                 </Link>
               </li>
               <li>
-                <Link to={`/contactus`} className="sub-menu-item">
+                <Link to={`/contact`} className="sub-menu-item">
                   Contact Us
                 </Link>
               </li>
